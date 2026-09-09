@@ -1,8 +1,10 @@
 {
-  "lastRun": "2026-09-09T22:25:00+08:00",
-  "date": "2026-09-09",
+  "lastRun": "2026-09-10T21:55:00+08:00",
+  "date": "2026-09-10",
   "status": "success",
   "itemCount": 17,
-  "deployNote": "已复用既有沙箱(bb531dcc163842dbbe9969a3794d2d24)重新发布，链接 https://bb531dcc163842dbbe9969a3794d2d24.app.workbuddy.link ；渲染校验 PASS（17 条卡片、12 个分类、无 JS 错误）。",
-  "giteeNote": "已推送至 Gitee master（commit 4996950），用于分发离线文件 news-offline.html；未开启 Pages（账号未实名，开启会 404）。"
+  "offlineNote": "news-offline.html 已本地重新生成，内嵌 2026-09-10 数据（今日17条+昨日17条），断网可看、永不404。已推 Gitee（commit fa2a1fb）。这是主交付，100%可靠。",
+  "deployNote": "【重要·平台限制】对 bb531dcc163842dbbe9969a3794d2d24 的静态重新发布只重指域名、不重新同步文件——沙箱容器里仍是 9/9 旧数据，公网3次校验均确认。本环境'重新发布'对已发布静态应用无法刷新内容，故在线链接暂时停在 9/9。此 deploy 步骤对沙箱新鲜度无效，每日在线刷新需改用 GitHub Pages（用户尚未注册）或依赖离线文件+邮件。",
+  "giteeNote": "已推送至 Gitee master（commit fa2a1fb，5 files changed），用于分发离线文件 news-offline.html；仓库私有需登录下载；未开启 Pages（账号未实名）。",
+  "mailNote": "2026-09-10T07:08:32+08:00 与本次手动更新均尝试向 2582990154@qq.com 发送，均失败。原因：Agent Mail 智能体邮箱尚未开通（status=not_bound）。邮箱开通后，6:45 自动化会自动补发；或开通后喊我手动补发一封测试。"
 }
