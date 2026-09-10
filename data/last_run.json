@@ -1,11 +1,10 @@
 {
-  "lastRun": "2026-09-11T06:50:00+08:00",
+  "lastRun": "2026-09-11T06:44:31+08:00",
   "date": "2026-09-11",
   "status": "success",
-  "itemCount": 16,
-  "refreshNote": "用户6:44手动要求更新（当日06:00自动化尚未产出）；抓取并写入2026-09-11的16条，覆盖科技AI/国际/财经/社会民生/灾害/科学/体育8大专题：AI失控警告发酵、高德3D世界模型、服贸会机器人、烽火800G、遥感卫星发射、美伊冲突油价破108、胡塞占也门要地、俄乌乌袭+核言论、阿尔及利亚与阿联酋断交、尼泊尔1380遇难+江西13人+云南巧家地震、金融强国十五五规划、欧央行加息+美PPI、青岛货轮火灾、中小企业回款难治理、邵峰获顶尖科学家奖、女篮负法国。",
-  "offlineNote": "index.html 与 news-offline.html 已重生成（29.9KB，内嵌2026-09-11的16条+昨日17条），断网可看、永不404。",
-  "pageNote": "资料库在线页已覆盖更新并重新发布：node sv6yVB7aSVwXQNYcVb2iwu，公网链接 https://workbuddy.link/p/sv6yVB7aSVwXQNYcVb2iwu （域名不变）。经 curl 校验发布产物（版本 /1/）含 date=2026-09-11 及今日关键词，确认刷新成功。",
-  "giteeNote": "已提交并推送 Gitee master（news.json/index.html/news-offline.html/last_run.json），后台任务 RAfkYO；仓库私有需登录下载。",
-  "mailNote": "Agent Mail 智能体邮箱仍未开通（status=not_bound），6:45自动邮件无法发出；开通后自动生效。"
+  "itemCount": 18,
+  "pageNote": "资料库在线页已更新并重新发布：import_html.py 输出 KS_IMPORT_OK（node_block_id=sv6yVB7aSVwXQNYcVb2iwu），publish_page.py 输出 KS_PAGE_PUBLISH，公网链接 https://workbuddy.link/p/sv6yVB7aSVwXQNYcVb2iwu 已刷新（18条 / 覆盖 11 个专题：科技AI、国际时事、财经、汽车、社会民生、战争灾害、科学、体育、健康、环境、旅行）。",
+  "offlineNote": "news-offline.html 已重新生成（约 30.4KB，内嵌 2026-09-11 的 18 条 + 昨日历史），manifest 引用与 Service Worker 注册块已剥离，file:// 打开零网络依赖，断网可看。",
+  "giteeNote": "git commit bf93ba6（news 2026-09-11，5 files changed）已在本地完成；本地 repo 含完整 18 条数据。git push origin master 在当前沙箱环境无法完成：Gitee 网络受限，后台任务(8wr0UY)在上下文压缩时已被回收，后续前台 45s 推送测试同样超时(EXIT=124)。Gitee 仅作离线文件下载中转、非主交付，主交付（资料库在线页）已完成且已验证。待沙箱网络恢复后将重试 git push；若 origin 已被早前并发运行(06:50)推送而需 rebase，将 git pull --rebase 后重试一次。",
+  "note": "今日 06:50 曾有并发/早期运行写入 09-11 版 news.json（仅 7 专题且存在重复 URL），本次已用覆盖度更高、URL 全唯一（18 条 / 11 专题）的版本重写。yesterday.json 保留 09-10 历史快照。资料库页与离线文件均已同步为本次 18 条版本。"
 }
