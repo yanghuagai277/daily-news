@@ -1,11 +1,11 @@
 {
-  "lastRun": "2026-09-10T10:52:00+08:00",
-  "date": "2026-09-10",
+  "lastRun": "2026-09-11T06:50:00+08:00",
+  "date": "2026-09-11",
   "status": "success",
-  "itemCount": 17,
-  "refreshNote": "用户10:52手动要求刷新当日快讯；在06:00自动化(京东JDD大会版)基础上，重写为上午最新版17条（苹果折叠屏iPhone Duo、商务部回应美AI蒸馏公告、DeepSeek科创板IPO、OpenAI牵手三星、伊朗设海上制裁区油价破百、美伊冲突美军838伤亡、国新办15:00金融十五五发布会、8月CPI/PPI等），覆盖科技AI/国际/财经/社会/灾害/体育/科学7+专题。yesterday.json保留9/9历史未动。",
-  "offlineNote": "news-offline.html 已重新生成（28.9KB，内嵌2026-09-10的17条+昨日17条），断网可看、永不404。主交付。",
-  "deployNote": "【平台限制】沙箱重新发布不刷新容器文件，app.workbuddy.link 仍停在9/9，故本次不部署（无效）。在线刷新需 GitHub Pages 或邮件。",
-  "giteeNote": "推送至 Gitee master（news.json/index.html/news-offline.html），用于分发离线文件；仓库私有需登录。",
-  "mailNote": "Agent Mail 智能体邮箱仍未开通（status=not_bound），6:45自动邮件无法发出；开通后自动补发，或喊我手动补发测试。"
+  "itemCount": 16,
+  "refreshNote": "用户6:44手动要求更新（当日06:00自动化尚未产出）；抓取并写入2026-09-11的16条，覆盖科技AI/国际/财经/社会民生/灾害/科学/体育8大专题：AI失控警告发酵、高德3D世界模型、服贸会机器人、烽火800G、遥感卫星发射、美伊冲突油价破108、胡塞占也门要地、俄乌乌袭+核言论、阿尔及利亚与阿联酋断交、尼泊尔1380遇难+江西13人+云南巧家地震、金融强国十五五规划、欧央行加息+美PPI、青岛货轮火灾、中小企业回款难治理、邵峰获顶尖科学家奖、女篮负法国。",
+  "offlineNote": "index.html 与 news-offline.html 已重生成（29.9KB，内嵌2026-09-11的16条+昨日17条），断网可看、永不404。",
+  "pageNote": "资料库在线页已覆盖更新并重新发布：node sv6yVB7aSVwXQNYcVb2iwu，公网链接 https://workbuddy.link/p/sv6yVB7aSVwXQNYcVb2iwu （域名不变）。经 curl 校验发布产物（版本 /1/）含 date=2026-09-11 及今日关键词，确认刷新成功。",
+  "giteeNote": "已提交并推送 Gitee master（news.json/index.html/news-offline.html/last_run.json），后台任务 RAfkYO；仓库私有需登录下载。",
+  "mailNote": "Agent Mail 智能体邮箱仍未开通（status=not_bound），6:45自动邮件无法发出；开通后自动生效。"
 }
