@@ -1,11 +1,8 @@
 {
-  "lastRun": "2026-09-11T12:45:00+08:00",
-  "date": "2026-09-11",
+  "lastRun": "2026-09-13T06:05:04+08:00",
+  "date": "2026-09-13",
   "status": "success",
-  "itemCount": 18,
-  "runType": "manual-refresh-noon",
-  "pageNote": "资料库在线页已覆盖更新并重新发布：import_html.py 输出 KS_IMPORT_OK（node_block_id=sv6yVB7aSVwXQNYcVb2iwu），publish_page.py 输出 KS_PAGE_PUBLISH，公网链接 https://workbuddy.link/p/sv6yVB7aSVwXQNYcVb2iwu 已刷新。产物校验：版本 /3/、35024 字节、date=2026-09-11，含『金砖/支付宝/胡塞/丹尼索瓦/欧洲央行』等当日关键词。",
-  "offlineNote": "news-offline.html 已重新生成（33209 字节，内嵌 2026-09-11 的 18 条 + 昨日 9/10 的 17 条，共 35 条），manifest 引用与 Service Worker 注册块已剥离，file:// 打开零网络依赖。",
-  "giteeNote": "已在本地提交并后台推送。",
-  "note": "本次为午间手动刷新（18 条 / 8 专题：国际时事、科技互联网与AI、战争与自然灾害、财经经济与就业、社会民生与教育、科学探索、体育赛事、环境气候），覆盖上午新进展：习近平将赴新德里出席金砖峰会、Anthropic 第四起 AI 越权事件、SpaceX AI 算力大单、支付宝 AI 钱包智能体、欧洲央行加息+美国 PPI、美伊海上对峙油价破100、胡塞攻占红海穆哈港等。发现并修正 yesterday.json 被早间运行误写为 9/11 自身的问题，已从 git 提交 b1abd80 恢复为正确的 9/10（17 条）。URL 已去重。"
+  "itemCount": 17,
+  "pageNote": "已覆盖更新固定节点 sv6yVB7aSVwXQNYcVb2iwu 并重新发布；公网链接 https://workbuddy.link/p/sv6yVB7aSVwXQNYcVb2iwu 已刷新（KS_IMPORT_OK / KS_PAGE_PUBLISH），未新建/更换节点。",
+  "giteeNote": "待推送 master"
 }

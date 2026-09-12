@@ -1,0 +1,202 @@
+# -*- coding: utf-8 -*-
+"""生成 2026-09-13 每日新闻数据。
+
+步骤:
+1) 把当前 data/news.json 完整备份为 data/yesterday.json（更新前快照）
+2) 写入新的 data/news.json（覆盖旧文件）
+"""
+import json
+from pathlib import Path
+from datetime import datetime, timezone, timedelta
+
+ROOT = Path(__file__).parent
+DATA = ROOT / "data"
+NEWS = DATA / "news.json"
+YEST = DATA / "yesterday.json"
+
+# 1) 先把当前 news.json 完整备份为 yesterday.json（更新前快照）
+if NEWS.exists():
+    YEST.write_text(NEWS.read_text(encoding="utf-8"), encoding="utf-8")
+    print("已备份 news.json -> yesterday.json (%d bytes)" % NEWS.stat().st_size)
+
+# 2) 生成 2026-09-13 的新闻数据
+tz_cst = timezone(timedelta(hours=8))
+generated_at = datetime.now(tz_cst).strftime("%Y-%m-%dT%H:%M:%S+08:00")
+
+items = [
+    {
+        "id": 1,
+        "category": "国际时事",
+        "scope": "国内",
+        "title": "习近平出席金砖国家领导人第十八次会晤并发表重要讲话",
+        "summary": "当地时间9月12日，国家主席习近平在新德里出席金砖国家领导人第十八次会晤第一阶段会议，发表《共担时代责任 勇做先锋力量》重要讲话，提出人工智能赋能新型工业化等三大先锋主张，并宣布中国将于明年接任金砖主席国、主办第十九次会晤。",
+        "source": "新华网/央视",
+        "url": "https://www.news.cn/world/20260912/3286d45fd68a49c2b7b04579ba25795b/c.html",
+    },
+    {
+        "id": 2,
+        "category": "科技互联网与AI",
+        "scope": "国际",
+        "title": "25位菲尔兹奖得主联合警告：AI与数学正“严重错位”",
+        "summary": "当地时间9月11日，陶哲轩、邓煜等25位菲尔兹奖得主联合发表《人工智能在数学中的严重错位》声明，警告AI企业将解题当作能力基准，可能损害数学界对概念理解与人才培养的核心目标，呼吁警惕批量生成答案摧毁思想土壤。",
+        "source": "新京报/网易",
+        "url": "https://www.163.com/dy/article/L6LL82IA0512D3VJ.html",
+    },
+    {
+        "id": 3,
+        "category": "科技互联网与AI",
+        "scope": "国内",
+        "title": "华为三折叠新机Mate XT 2开售即售罄，19999元起",
+        "summary": "9月12日10:08，华为三折叠旗舰Mate XT 2非凡大师全渠道首销，起售价19999元，各版本及配色开售数分钟即售罄；搭载麒麟9050Pro、10.2英寸屏、3.5mm超薄机身，代抢费一度炒至5000元。",
+        "source": "湖南日报/财联社/今日头条",
+        "url": "https://www.toutiao.com/article/7684546614664413732/",
+    },
+    {
+        "id": 4,
+        "category": "财经经济与就业",
+        "scope": "国际",
+        "title": "中东局势缓和油价回落，美股道指涨509点终结四连跌",
+        "summary": "9月12日，尽管美国8月核心CPI超预期、美联储下周加息概率升至近九成，但中东缓和带动油价自四个月高位回落，叠加甲骨文资本开支引爆AI算力预期，道指收涨509点终结四连跌，纳指涨0.96%，戴尔飙涨近12%创新高。",
+        "source": "华尔街见闻/今日头条",
+        "url": "https://www.toutiao.com/article/7684687021536789018/",
+    },
+    {
+        "id": 5,
+        "category": "财经经济与就业",
+        "scope": "国内",
+        "title": "《中国矿产资源报告2026》发布：14种矿产储量居世界第一",
+        "summary": "9月11日发布的《中国矿产资源报告2026》显示，截至“十四五”末，我国稀土、钨、锡、钼等14种矿产储量居世界第一位，9种居前四位；2025年17种矿产产量世界第一，稀土冶炼产品占全球94%，产业链主导地位持续巩固。",
+        "source": "央广网/自然资源部",
+        "url": "https://www.cnr.cn/newscenter/dj/20260911/t20260911_527810868.shtml",
+    },
+    {
+        "id": 6,
+        "category": "战争与自然灾害",
+        "scope": "国际",
+        "title": "胡塞称过去48小时沙特对也门发动129次空袭",
+        "summary": "也门胡塞武装12日称，过去48小时沙特战机对也门7省发动129次空袭；此前胡塞已控制曼德海峡战略要地佩里姆岛及西部海岸，沙特东西输油管道遭无人机袭击后预防性关闭，红海航运与全球能源供应承压。",
+        "source": "新华社/搜狐",
+        "url": "https://www.sohu.com/a/1075358868_119038",
+    },
+    {
+        "id": 7,
+        "category": "战争与自然灾害",
+        "scope": "国内",
+        "title": "青岛北海造船厂外籍货轮检修起火，25人遇难",
+        "summary": "9月10日11时15分许，中国船舶集团青岛北海造船有限公司一艘外籍货轮靠港维修期间起火，船上42人中12人安全撤出、5人受伤，25名失联人员于当晚19时24分全部找到、均无生命体征；习近平作出重要指示，事故原因正调查。",
+        "source": "人民网/人民日报",
+        "url": "https://sd.people.com.cn/BIG5/n2/2026/0911/c166192-41693788.html",
+    },
+    {
+        "id": 8,
+        "category": "社会民生与教育",
+        "scope": "国内",
+        "title": "“红通人员”、瑞金市原扶贫办主任曾能贵被引渡回国",
+        "summary": "近日，在中央追逃办统筹协调下，经国际执法司法合作，“红通人员”、江西省瑞金市原扶贫和移民办主任曾能贵被引渡回国。其涉嫌在扶贫项目中受贿，2024年1月外逃，今年1月被国际刑警组织发布红色通报，系“天网2026”行动成果。",
+        "source": "中国新闻网/央视",
+        "url": "https://m.chinanews.com/wap/detail/cht/zw/10695307.shtml",
+    },
+    {
+        "id": 9,
+        "category": "科学探索",
+        "scope": "国内",
+        "title": "周伯文浦江论坛提出“科学研究是下一个编程”",
+        "summary": "9月12日浦江创新论坛主论坛上，上海人工智能实验室主任周伯文提出“科学研究是下一个编程”，指出AI与科学将形成双轮驱动——单克隆抗体研发从4年压缩至90天，AI正从工具变为科研常驻参与者，但科学探索的罗盘仍应由人类掌握。",
+        "source": "上观新闻/文汇报",
+        "url": "https://www.jfdaily.com/staticsg/res/html/web/newsDetail.html?id=1175891&sid=11",
+    },
+    {
+        "id": 10,
+        "category": "体育赛事",
+        "scope": "国内",
+        "title": "亚运会男篮中国105:59胜巴林，两连胜提前锁定八强",
+        "summary": "9月12日名古屋亚运会男篮小组赛，中国队以105:59大胜巴林队豪取两连胜，凭借净胜84分提前锁定八强席位；全队11人登场全部得分，廖三宁23分6助攻、李悦洲6投全中18分，下一场将冲击小组第一。",
+        "source": "新华网/新华社",
+        "url": "https://www.news.cn/20260913/bedd5a42310f45d19871feb606ef1e70/c.html",
+    },
+    {
+        "id": 11,
+        "category": "健康养生",
+        "scope": "国内",
+        "title": "研究：走路护心有“黄金组合”，每日7500至1万步+快走最佳",
+        "summary": "《英国运动医学杂志》9月刊登一项追踪超6.4万人、历时8年的研究：每日7500—10000步且峰值步频约100步/分钟时，全因死亡风险最低（降43%）；步数不足者提速同样获益，超1万步性价比反而下降，“过犹不及”。",
+        "source": "人民日报健康客户端/腾讯",
+        "url": "https://so.html5.qq.com/page/real/search_news?docid=70000021_6076aa4fcb584952",
+    },
+    {
+        "id": 12,
+        "category": "环境气候",
+        "scope": "国内",
+        "title": "国家防总针对海南启动防汛四级应急响应",
+        "summary": "受南海热带低压（或成今年首个秋台风“杜鹃”）影响，9月13日至15日海南岛等地有大到暴雨、局地大暴雨，山洪地质灾害及城市内涝风险高。国家防总于9月12日19时对海南启动防汛四级应急响应。",
+        "source": "央视新闻/应急管理部",
+        "url": "https://news.qq.com/rain/a/20260912A0B4H800",
+    },
+    {
+        "id": 13,
+        "category": "汽车出行",
+        "scope": "国内",
+        "title": "九部门印发智能网联新能源汽车“十五五”规划",
+        "summary": "工信部等九部门印发《智能网联新能源汽车产业发展“十五五”规划》，提出到2030年新能源乘用车、商用车新车销量占比分别达70%、40%，具备自动驾驶功能汽车规模应用，并首次将“产能预警调控”写入规划，推动落后产能有序退出。",
+        "source": "第一财经/腾讯证券",
+        "url": "https://gu.qq.com/resources/shy/news/detail-v2/index.html?t=1#/index?_tentrees_trans=0&id=SN20260911133201b624342d",
+    },
+    {
+        "id": 14,
+        "category": "游戏电竞",
+        "scope": "国际",
+        "title": "2026暴雪嘉年华重启，魔兽/暗黑/星际/守望重磅前瞻",
+        "summary": "暌违两年，暴雪嘉年华于9月12日至13日在美国阿纳海姆重启。开幕式对应北京时间13日凌晨1:30免费直播；四款核心IP成焦点——《魔兽世界》新资料片《最后的泰坦》、暗黑30周年回顾、星际神秘新作及守望先锋新英雄预告，并举办多项电竞赛事总决赛。",
+        "source": "游民星空",
+        "url": "https://www.gamersky.com/news/202609/2208376.shtml",
+    },
+    {
+        "id": 15,
+        "category": "文化读书",
+        "scope": "国际",
+        "title": "第28届圣保罗国际图书双年展9月13日闭幕",
+        "summary": "拉丁美洲最大书展——第28届圣保罗国际图书双年展于9月4日至13日在巴西圣保罗举行，以“情感盛宴”为主题，展览面积8.6万平方米（较上届增28%），汇聚350位作家、269家展商，西班牙首次担任主宾国，预计吸引超70万人次。",
+        "source": "百度百科/北青网",
+        "url": "https://baike.baidu.com/item/%E7%AC%AC28%E5%B1%8A%E5%9C%A3%E4%BF%9D%E7%BD%97%E5%9B%BD%E9%99%85%E5%9B%BE%E4%B9%A6%E5%8F%8C%E5%B9%B4%E5%B1%95/68521282",
+    },
+    {
+        "id": 16,
+        "category": "旅行出行",
+        "scope": "国内",
+        "title": "京雄快线开启全线贯通试运行，雄安可直达北京草桥",
+        "summary": "9月12日，京雄快线正式启动全线贯通试运行。该线起自雄安城际站、全长约86公里，是国内首条设计时速200公里、公交化运营的轨道快线，接入北京地铁大兴机场线贯通至草桥，未来从雄安“半小时到大兴机场、一小时到北京丽泽”。",
+        "source": "中国新闻网/央视",
+        "url": "https://www.chinanews.com/cj/2026/09-12/10695252.shtml",
+    },
+    {
+        "id": 17,
+        "category": "国际时事",
+        "scope": "国际",
+        "title": "欧盟委员会批准61亿欧元援乌资金",
+        "summary": "欧盟委员会11日批准向乌克兰提供61亿欧元资金，用于采购防空反导系统、弹药、无人机和电子战设备等，乌克兰可借此采购“爱国者”PAC-3导弹。该笔资金来自900亿欧元援乌贷款，至此2026年度283亿欧元国防援助已全部分配完毕。",
+        "source": "央视新闻",
+        "url": "https://ysxw.cctv.cn/article.html?item_id=4982214393469695162",
+    },
+]
+
+# 校验 url 唯一性
+urls = [it["url"] for it in items]
+assert len(urls) == len(set(urls)), "存在重复 URL！"
+
+# 校验 summary 长度（中文约 60-130 字，宽容到 50-160 字）
+for it in items:
+    n = len(it["summary"])
+    if n < 50 or n > 160:
+        print("WARNING: id=%d summary 长度=%d (建议 60-130)" % (it["id"], n))
+
+payload = {
+    "date": "2026-09-13",
+    "generatedAt": generated_at,
+    "method": "混合（搜索引擎实时抓取 + RSS）",
+    "items": items,
+}
+
+NEWS.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+print("已写入 news.json: date=%s, items=%d, generatedAt=%s" % (payload["date"], len(items), generated_at))
+print("覆盖专题数=%d" % len({it['category'] for it in items}))
+print("国内外比=%d:%d" % (sum(1 for it in items if it['scope']=='国内'), sum(1 for it in items if it['scope']=='国际')))
