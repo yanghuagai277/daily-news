@@ -65,6 +65,134 @@ header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdro
   <div id="list"></div>
   <div class="foot" id="foot"></div>
 </div>
+<script>
+(function(){
+  // 注销历史遗留的 Service Worker：旧版 SW 曾把空首页缓存住，导致手机端一直白屏
+  
 
+  var D = window.__DATA__ || {};
+  var data = D.today || null;
+  var yest = D.yest || null;
+  var view = "today";
+  var cat = "全部";
+  var CAT_KEY = "news_cat_v1";
+
+  function $(id){ return document.getElementById(id); }
+  function setText(id, t){ var el = $(id); if (el) el.textContent = t; }
+
+  var COLORS = {"科技互联网与AI":"#1f6feb","国际时事":"#8b5cf6","财经经济与就业":"#f59e0b","社会民生与教育":"#10b981","战争与自然灾害":"#ef4444","科学探索":"#0ea5e9","体育赛事":"#14b8a6","健康养生":"#06b6d4","环境气候":"#22c55e","汽车出行":"#64748b","娱乐影视":"#ec4899","游戏电竞":"#6366f1","文化读书":"#a855f7","旅行出行":"#f97316"};
+  function colorOf(n){ return COLORS[n] || "#7b8698"; }
+
+  function esc(s){
+    return String(s == null ? "" : s).replace(/[&<>"]/g, function(c){
+      return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c];
+    });
+  }
+
+  function current(){ return view === "today" ? data : yest; }
+
+  function renderChips(){
+    var box = $("chips"); if (!box) return;
+    var d = current();
+    var cats = [];
+    if (d && d.items) {
+      d.items.forEach(function(it){
+        if (it.category && cats.indexOf(it.category) < 0) cats.push(it.category);
+      });
+    }
+    if (!cats.length) { box.innerHTML = ""; return; }
+    if (cat !== "全部" && cats.indexOf(cat) < 0) cat = "全部";
+    var html = ['<button class="chip' + (cat === "全部" ? " on" : "") + '" data-c="全部">全部</button>'];
+    cats.forEach(function(c){
+      html.push('<button class="chip' + (cat === c ? " on" : "") + '" data-c="' + esc(c) + '">' + esc(c) + '</button>');
+    });
+    box.innerHTML = html.join("");
+    var btns = box.querySelectorAll(".chip");
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", (function(btn){
+        return function(){
+          cat = btn.getAttribute("data-c");
+          try { localStorage.setItem(CAT_KEY, cat); } catch (e) {}
+          renderChips(); renderList();
+        };
+      })(btns[i]));
+    }
+  }
+
+  function renderList(){
+    var list = $("list"); if (!list) return;
+    var d = current();
+    if (!d || !d.items || !d.items.length) {
+      setText("stat", "");
+      list.innerHTML = '<div class="empty">暂无数据。<br>请稍后点右上角「刷新」重试。</div>';
+      return;
+    }
+    var items = d.items.filter(function(it){
+      return cat === "全部" || it.category === cat;
+    });
+    setText("stat", (view === "today" ? "今日 " : "昨日 ") + items.length + " 条");
+    setText("datestr", (d.date || "") + (view === "today" ? " · 每天更新" : " · 昨日回顾"));
+    if (!items.length) {
+      list.innerHTML = '<div class="empty">该分类暂无内容，换个分类看看。</div>';
+      return;
+    }
+    var out = "";
+    items.forEach(function(it){
+      out += '<div class="card">'
+        + '<div><span class="tag" style="background:' + colorOf(it.category) + '">' + esc(it.category) + '</span>'
+        + '<span class="scope">' + esc(it.scope || "") + '</span></div>'
+        + '<h2>' + esc(it.title) + '</h2>'
+        + '<p>' + esc(it.summary) + '</p>'
+        + '<div class="meta"><span>来源：' + esc(it.source || "未知") + '</span>'
+        + '<a class="read" href="' + esc(it.url) + '" target="_blank" rel="noopener">阅读原文 &rsaquo;</a></div>'
+        + '</div>';
+    });
+    list.innerHTML = out;
+    setText("foot", "共 " + d.items.length + " 条 · 来源为公开报道");
+  }
+
+  function render(){ renderChips(); renderList(); }
+
+  function switchView(v){
+    view = v;
+    var t = $("tabToday"), y = $("tabYest");
+    if (t) t.className = "tab" + (v === "today" ? " on" : "");
+    if (y) y.className = "tab" + (v === "yesterday" ? " on" : "");
+    render();
+  }
+
+  function load(){
+    // 任何情况下都不允许更新逻辑影响已渲染内容（老浏览器无 fetch 时同步抛错也要吞掉）
+    try {
+      return fetch("./data/news.json", { cache: "no-store" })
+        .then(function(r){ if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+        .then(function(j){
+          if (j && j.items && j.items.length) { data = j; render(); }
+        })
+        .catch(function(){ /* 静默：保留内联数据，绝不清空页面 */ });
+    } catch (e) {
+      return Promise.resolve();
+    }
+  }
+
+  try {
+    var saved = null;
+    try { saved = localStorage.getItem(CAT_KEY); } catch (e) {}
+    if (saved) cat = saved;
+    var t = $("tabToday"); if (t) t.addEventListener("click", function(){ switchView("today"); });
+    var y = $("tabYest"); if (y) y.addEventListener("click", function(){ switchView("yesterday"); });
+    var r = $("refreshBtn");
+    if (r) r.addEventListener("click", function(){
+      r.textContent = "更新中…";
+      load().then(function(){ r.textContent = "\u21BB 刷新"; });
+    });
+    render();
+    try { load(); } catch (e2) {}
+  } catch (e) {
+    var l = $("list");
+    if (l) l.innerHTML = '<div class="empty">页面出错：' + esc(e && e.message) + '</div>';
+  }
+})();
+</script>
 </body>
 </html>
