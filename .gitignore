@@ -1,0 +1,8 @@
+.cprofile/
+.cprofile2/
+__pycache__/
+*.pyc
+
+# 每日长图（本地交付用，体积大，不入库）
+news-*.png
+

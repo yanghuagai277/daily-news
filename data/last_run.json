@@ -1,8 +1,10 @@
 {
-  "lastRun": "2026-09-13T06:19:49+08:00",
-  "date": "2026-09-13",
+  "lastRun": "2026-09-14T07:12:00+08:00",
+  "date": "2026-09-14",
   "status": "success",
-  "itemCount": 17,
-  "pageNote": "已覆盖更新固定节点 sv6yVB7aSVwXQNYcVb2iwu 并重新发布；公网链接 https://workbuddy.link/p/sv6yVB7aSVwXQNYcVb2iwu 已刷新（KS_IMPORT_OK / KS_PAGE_PUBLISH），未新建/更换节点。",
-  "giteeNote": "推送失败：沙箱网络无法连接 gitee.com，两次尝试均超时（RC=124）。本地 commit 'news 2026-09-13' 已完成，待网络恢复后重试 `git push origin master` 即可。Gitee 仅作离线文件下载中转，不影响主交付（资料库在线页）。"
+  "itemCount": 22,
+  "pageNote": "已覆盖更新固定节点 sv6yVB7aSVwXQNYcVb2iwu 并重新发布；公网链接 https://workbuddy.link/p/sv6yVB7aSVwXQNYcVb2iwu 已刷新（KS_IMPORT_OK / KS_PAGE_PUBLISH），产物版本 /7/、35992 字节，含今日日期与关键词，未新建/更换节点。",
+  "note": "本次为用户手动触发（要求多推时事新闻）：22 条，覆盖 7 个专题，其中国际时事 5 条、财经 5 条、战争与自然灾害 3 条，时事/国际类占比明显提高。已生成离线文件与长图 news-2026-09-14.png。",
+  "giteeNote": "后台推送中（沙箱连 gitee.com 一贯较慢），commit 'news 2026-09-14 (22条, 时事加强版)'。Gitee 仅作离线文件下载中转，不影响主交付（资料库在线页）。",
+  "automationNote": "今早 06:00 的自动抓取任务未产出 9/14 数据（news.json 在 07:06 检查时仍为 9/13），本次由用户手动触发补齐，需留意明日自动任务是否正常。"
 }
