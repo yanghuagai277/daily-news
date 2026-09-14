@@ -1,10 +1,9 @@
 {
-  "lastRun": "2026-09-14T07:12:00+08:00",
-  "date": "2026-09-14",
+  "lastRun": "2026-09-15T07:05:00+08:00",
+  "date": "2026-09-15",
   "status": "success",
   "itemCount": 22,
-  "pageNote": "已覆盖更新固定节点 sv6yVB7aSVwXQNYcVb2iwu 并重新发布；公网链接 https://workbuddy.link/p/sv6yVB7aSVwXQNYcVb2iwu 已刷新（KS_IMPORT_OK / KS_PAGE_PUBLISH），产物版本 /7/、35992 字节，含今日日期与关键词，未新建/更换节点。",
-  "note": "本次为用户手动触发（要求多推时事新闻）：22 条，覆盖 7 个专题，其中国际时事 5 条、财经 5 条、战争与自然灾害 3 条，时事/国际类占比明显提高。已生成离线文件与长图 news-2026-09-14.png。",
-  "giteeNote": "后台推送中（沙箱连 gitee.com 一贯较慢），commit 'news 2026-09-14 (22条, 时事加强版)'。Gitee 仅作离线文件下载中转，不影响主交付（资料库在线页）。",
-  "automationNote": "今早 06:00 的自动抓取任务未产出 9/14 数据（news.json 在 07:06 检查时仍为 9/13），本次由用户手动触发补齐，需留意明日自动任务是否正常。"
+  "pageNote": "已覆盖更新固定节点 sv6yVB7aSVwXQNYcVb2iwu 并重新发布；公网链接 https://workbuddy.link/p/sv6yVB7aSVwXQNYcVb2iwu 已刷新（KS_IMPORT_OK / KS_PAGE_PUBLISH）。发布版本升至 /11/，curl 校验产物页含 2026-09-15、window.__DATA__、getElementById/renderList 等渲染函数及 霍尔木兹/武契奇/明珠星座/五指山/亚运 关键词，确认刷新生效。未新建/更换节点。",
+  "giteeNote": "本次为手动更新，提交后 git push origin master（后台执行）。仓库 https://gitee.com/garden-of-flowers/daily-news 用于离线文件下载中转；未开启 Pages。",
+  "note": "22 条 / 覆盖 8 个专题（国际时事 7、战争与自然灾害 3、科技互联网与AI 5、体育赛事 3、财经经济与就业 1、社会民生与教育 1、健康养生 1、环境气候 1），国内外 13:9，时事/国际比重明显加重（用户要求）。22 条 URL 全部唯一。离线文件 news-offline.html 经 make_offline.py 渲染完整性校验通过（getElementById/renderList/innerHTML/addEventListener 均 > 0；40 个 id = 今天 22 + 昨天 18）。今早 6:00 自动化未产出当天数据（news.json 检查时仍为 9/14），本次为手动抓取更新。"
 }
