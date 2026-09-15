@@ -1,9 +1,10 @@
 {
-  "lastRun": "2026-09-15T07:09:25+08:00",
-  "date": "2026-09-15",
+  "lastRun": "2026-09-16T07:05:00+08:00",
+  "date": "2026-09-16",
   "status": "success",
-  "itemCount": 22,
-  "pageNote": "已覆盖更新固定节点 sv6yVB7aSVwXQNYcVb2iwu 并重新发布；公网链接 https://workbuddy.link/p/sv6yVB7aSVwXQNYcVb2iwu 已刷新（KS_IMPORT_OK / KS_PAGE_PUBLISH）。发布版本升至 /12/，curl 校验产物页含 2026-09-15×3、2026-09-14×3、window.__DATA__×2 及 getElementById/renderList 等渲染函数，确认刷新生效。未新建/更换节点。",
-  "giteeNote": "本环境 git push 至 Gitee 连续 3 次挂起（网络/TLS 受限，与历史提交 dbccfb5 一致）；但前序 07:05 实例已成功推送 09-15 离线文件，且本次重新生成内容与之相同（同一 news.json + 09-14 yesterday.json），故 Gitee 备份已覆盖今日数据。主交付（资料库在线页）不受影响。未开启 Pages。",
-  "note": "本日为接续执行：前序 07:05 实例已生成 22 条 09-15 新闻并完成首轮发布/推送。本次重新生成离线文件（embed_data + make_offline 渲染完整性校验通过：getElementById/renderList/innerHTML/addEventListener 均>0），重新导入并发布固定节点，确认在线页含今日数据与渲染函数。覆盖 8 个专题（国际时事7、科技互联网与AI5、战争与自然灾害3、体育赛事3、财经经济与就业1、社会民生与教育1、健康养生1、环境气候1），国内外 12:10。"
+  "itemCount": 17,
+  "pageNote": "已覆盖更新固定节点 sv6yVB7aSVwXQNYcVb2iwu 并重新发布；公网链接 https://workbuddy.link/p/sv6yVB7aSVwXQNYcVb2iwu 已刷新到产物版本 /13/，curl 校验含 2026-09-16×3、2026-09-15×3、renderList×3 及今日独有关键词「努比亚NaviX Ultra」。未新建/更换节点。",
+  "githubNote": "关键修复：当日沙箱内 github.com:443 完全不可达（curl time_total=21s、git push 报 Could not connect，连试 3 次均失败），但 api.github.com（http=200）与 *.github.io（http=200）正常。改用 GitHub REST Git Data API（blobs→tree→commit→PATCH refs/heads/main）直接造提交，绕过 git 传输通道，成功把 main 从 6c8207c 推进到 8954075d。约 40 秒后 GitHub Pages 校验 data/news.json 已变为 2026-09-16/17 条。复用脚本：news-dashboard/tools/push_via_api.py。",
+  "giteeNote": "Gitee 推送以后台方式补跑（git push origin master），沙箱连 gitee.com 一贯慢，仅作下载中转，不影响主交付。",
+  "note": "本日 06:50 前后自动化已在本地生成 09-16 数据（news.json/index.html/news-offline.html）但未完成提交推送；本次接续补跑 embed_data.py + make_offline.py（渲染完整性校验：getElementById=1、renderList=3、innerHTML=6、addEventListener=4，serviceWorker=0），并补齐「GitHub 提交 + 资料库在线页刷新」两条在线渠道。覆盖 12 个专题 17 条，国内 14 / 国际 3。"
 }
