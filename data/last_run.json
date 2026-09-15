@@ -1,10 +1,9 @@
 {
-  "lastRun": "2026-09-16T07:05:00+08:00",
+  "lastRun": "2026-09-16T07:16:38.466655+08:00",
   "date": "2026-09-16",
   "status": "success",
   "itemCount": 17,
-  "pageNote": "已覆盖更新固定节点 sv6yVB7aSVwXQNYcVb2iwu 并重新发布；公网链接 https://workbuddy.link/p/sv6yVB7aSVwXQNYcVb2iwu 已刷新到产物版本 /13/，curl 校验含 2026-09-16×3、2026-09-15×3、renderList×3 及今日独有关键词「努比亚NaviX Ultra」。未新建/更换节点。",
-  "githubNote": "关键修复：当日沙箱内 github.com:443 完全不可达（curl time_total=21s、git push 报 Could not connect，连试 3 次均失败），但 api.github.com（http=200）与 *.github.io（http=200）正常。改用 GitHub REST Git Data API（blobs→tree→commit→PATCH refs/heads/main）直接造提交，绕过 git 传输通道，成功把 main 从 6c8207c 推进到 8954075d。约 40 秒后 GitHub Pages 校验 data/news.json 已变为 2026-09-16/17 条。复用脚本：news-dashboard/tools/push_via_api.py。",
-  "giteeNote": "Gitee 推送以后台方式补跑（git push origin master），沙箱连 gitee.com 一贯慢，仅作下载中转，不影响主交付。",
-  "note": "本日 06:50 前后自动化已在本地生成 09-16 数据（news.json/index.html/news-offline.html）但未完成提交推送；本次接续补跑 embed_data.py + make_offline.py（渲染完整性校验：getElementById=1、renderList=3、innerHTML=6、addEventListener=4，serviceWorker=0），并补齐「GitHub 提交 + 资料库在线页刷新」两条在线渠道。覆盖 12 个专题 17 条，国内 14 / 国际 3。"
+  "githubNote": "主在线入口已上线。先用 git push github master:main 因并发实例持续经 REST API 维护 main（41a02e2→cb18c0e，等效17条/12专题）多次 non-fast-forward；改用 tools/push_via_api.py（GitHub REST Git Data API）确认远端 main 内容与本地精选版字节一致(UP_TO_DATE)，无需重复提交。公网校验 https://yanghuagai277.github.io/daily-news/data/news.json → date=2026-09-16、17条、唯一URL 17/17、覆盖12专题、含本实例专属URL（beijing.gov.cn、chinanews gj 10696552、hb.people.com.cn、chinanews aseaninfo）。Pages 约30-60秒自动重建。",
+  "pageNote": "备用在线入口已更新。import_html.py 输出 KS_IMPORT_OK（node_block_id=sv6yVB7aSVwXQNYcVb2iwu, file_name=news-offline.html）；publish_page.py 输出 KS_PAGE_PUBLISH，公网 https://workbuddy.link/p/sv6yVB7aSVwXQNYcVb2iwu 已刷新。导入文件为本实例校验过的 news-offline.html（含 getElementById/renderList/innerHTML/addEventListener/window.__DATA__，无空白页）。",
+  "giteeNote": "Gitee 离线文件中转仓库已同步：git push origin master 返回 Everything up-to-date（本地 master 与 origin/master 一致，今日内容已由并发实例推送）。仓库 https://gitee.com/garden-of-flowers/daily-news 用作离线文件下载中转，未开启 Gitee Pages。"
 }
