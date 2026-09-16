@@ -1,9 +1,9 @@
 {
-  "lastRun": "2026-09-16T07:16:38.466655+08:00",
-  "date": "2026-09-16",
+  "lastRun": "2026-09-17T06:12:00+08:00",
+  "date": "2026-09-17",
   "status": "success",
-  "itemCount": 17,
-  "githubNote": "主在线入口已上线。先用 git push github master:main 因并发实例持续经 REST API 维护 main（41a02e2→cb18c0e，等效17条/12专题）多次 non-fast-forward；改用 tools/push_via_api.py（GitHub REST Git Data API）确认远端 main 内容与本地精选版字节一致(UP_TO_DATE)，无需重复提交。公网校验 https://yanghuagai277.github.io/daily-news/data/news.json → date=2026-09-16、17条、唯一URL 17/17、覆盖12专题、含本实例专属URL（beijing.gov.cn、chinanews gj 10696552、hb.people.com.cn、chinanews aseaninfo）。Pages 约30-60秒自动重建。",
-  "pageNote": "备用在线入口已更新。import_html.py 输出 KS_IMPORT_OK（node_block_id=sv6yVB7aSVwXQNYcVb2iwu, file_name=news-offline.html）；publish_page.py 输出 KS_PAGE_PUBLISH，公网 https://workbuddy.link/p/sv6yVB7aSVwXQNYcVb2iwu 已刷新。导入文件为本实例校验过的 news-offline.html（含 getElementById/renderList/innerHTML/addEventListener/window.__DATA__，无空白页）。",
-  "giteeNote": "Gitee 离线文件中转仓库已同步：git push origin master 返回 Everything up-to-date（本地 master 与 origin/master 一致，今日内容已由并发实例推送）。仓库 https://gitee.com/garden-of-flowers/daily-news 用作离线文件下载中转，未开启 Gitee Pages。"
+  "itemCount": 18,
+  "githubNote": "发布中（push_via_api.py）",
+  "pageNote": "待发布（资料库节点 sv6yVB7aSVwXQNYcVb2iwu）",
+  "giteeNote": "待推送（git push origin master）"
 }
