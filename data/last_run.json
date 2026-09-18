@@ -3,7 +3,7 @@
   "date": "2026-09-17",
   "status": "success",
   "itemCount": 18,
-  "githubNote": "发布中（push_via_api.py）",
-  "pageNote": "待发布（资料库节点 sv6yVB7aSVwXQNYcVb2iwu）",
-  "giteeNote": "待推送（git push origin master）"
+  "githubNote": "主在线入口已上线。本地 commit 5b3a79d（5 files），tools/push_via_api.py 推送成功（NEW_COMMIT b39990d…, API_PUSH_OK）。公网校验 https://yanghuagai277.github.io/daily-news/data/news.json → date=2026-09-17、18条；首页含 renderList（第2次轮询即命中，Pages 重建约20秒完成）。",
+  "pageNote": "备用在线入口已更新。import_html.py 输出 KS_IMPORT_OK（node_block_id=sv6yVB7aSVwXQNYcVb2iwu, file_name=news-offline.html）；publish_page.py 输出 KS_PAGE_PUBLISH，公网 https://workbuddy.link/p/sv6yVB7aSVwXQNYcVb2iwu 已刷新。导入文件为本实例校验过的 news-offline.html（含 getElementById/renderList/innerHTML/addEventListener/window.__DATA__，无空白页）。",
+  "giteeNote": "Gitee 离线文件中转仓库推送中：git push origin master 因沙箱连 gitee.com 网络受限，已于后台运行（task vw9J9H），待完成通知。Gitee 仅作离线文件下载中转、非主交付，不影响线上页；若最终超时，主交付（GitHub Pages + 资料库在线页）不受影响。"
 }
