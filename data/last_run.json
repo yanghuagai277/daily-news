@@ -1,9 +1,9 @@
 {
-  "lastRun": "2026-09-19T07:15:00+08:00",
-  "date": "2026-09-19",
+  "lastRun": "2026-09-21T12:13:19.842663+08:00",
+  "date": "2026-09-21",
   "status": "success",
   "itemCount": 18,
-  "githubNote": "GitHub Pages 主入口：本地 commit 19dbb93 → tools/push_via_api.py 推送成功（NEW_COMMIT 45c6934edfee3034d8014cd7c04e5a40f87f77c4, API_PUSH_OK）。公网校验 https://yanghuagai277.github.io/daily-news/data/news.json → date=2026-09-19、18 条；首页含 renderList 与 window.__DATA__，第 2 次轮询命中（Pages 重建约 20 秒）。",
-  "pageNote": "备用入口（资料库 node_block_id=sv6yVB7aSVwXQNYcVb2iwu）：runtime_context 判 client 模式 → connect_open_platform(skill_id=library) 取 token 经 --token-stdin 传入 → import_html.py 输出 KS_IMPORT_OK（file_name=news-offline.html）→ publish_page.py 输出 KS_PAGE_PUBLISH，公网 https://workbuddy.link/p/sv6yVB7aSVwXQNYcVb2iwu 已刷新。沿用固定节点，未新建/换节点。",
-  "giteeNote": "Gitee 离线文件下载中转：git push origin master 成功（eb6c0d3..19dbb93），仓库 https://gitee.com/garden-of-flowers/daily-news 已更新；未开启 Pages。"
+  "githubNote": "本地提交 8e40ac4 -> tools/push_via_api.py 推送成功 (NEW_COMMIT 44f872d1..., API_PUSH_OK)。公网校验 https://yanghuagai277.github.io/daily-news/ : date=2026-09-21, items=18, index 含 renderList(3), today+yest 数据完整, Pages 重建约20秒命中。",
+  "pageNote": "资料库节点 sv6yVB7aSVwXQNYcVb2iwu (https://workbuddy.link/p/sv6yVB7aSVwXQNYcVb2iwu) 经 connect_open_platform(skill_id=library) 取 token 后 import_html.py 输出 KS_IMPORT_OK、publish_page.py 输出 KS_PAGE_PUBLISH, 已刷新。",
+  "giteeNote": "git push origin master 因沙箱连 gitee.com 网络受限后台运行逾6分钟未果已中止(非主交付,不影响线上页); 将清理后重试一次。"
 }
