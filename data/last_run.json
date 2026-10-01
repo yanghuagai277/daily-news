@@ -1,9 +1,9 @@
 {
-  "lastRun": "2026-09-27T07:43:53+08:00",
-  "date": "2026-09-27",
-  "status": "success",
+  "lastRun": "2026-10-01T15:40:04.529812+08:00",
+  "date": "2026-10-01",
+  "status": "partial",
   "itemCount": 17,
-  "githubNote": "GitHub Pages 主入口：tools/push_via_api.py 推送成功（NEW_COMMIT b5ff140fa6，API_PUSH_OK）。公网轮询第3次命中：data/news.json date=2026-09-27、17条，首页含 renderList（非空白页）。站点 https://yanghuagai277.github.io/daily-news/",
-  "pageNote": "资料库备用入口：runtime_context 判 client 模式，connect_open_platform(skill_id=library) 取 token 经 --token-stdin 传入；import_html.py 输出 KS_IMPORT_OK，publish_page.py 输出 KS_PAGE_PUBLISH；产物 v22 含 2026-09-27×5 与 renderList，公网 https://workbuddy.link/p/sv6yVB7aSVwXQNYcVb2iwu 已刷新（沿用固定节点，未新建/换节点）",
-  "giteeNote": "Gitee 离线下载中转：git push origin master 成功（a5376b5..c165cef，EXIT=0）。仓库 https://gitee.com/garden-of-flowers/daily-news 已更新；未开启 Gitee Pages"
+  "githubNote": "GitHub Pages 主入口：本沙箱当前无法连接 GitHub（api.github.com 返回 WinError 10061 积极拒绝；github.com:443 超时 'Could not connect to server'），push_via_api.py 与 git push 均失败。本地提交 fea6ed6（5 files: data/news.json, data/yesterday.json, index.html, news-offline.html, data/last_run.json）已完成、内容正确。待沙箱网络恢复后重跑 `python tools/push_via_api.py` 即可推送并触发 Pages 重建（约30-60秒）。当前线上 Pages 仍为 2026-09-30 旧数据，需补齐推送后才会刷新。",
+  "pageNote": "资料库备用入口：runtime_context 判 client 模式，connect_open_platform(skill_id=library) 取 token 经 --token-stdin 传入；import_html.py 输出 KS_IMPORT_OK（file_name=news-offline.html），publish_page.py 输出 KS_PAGE_PUBLISH（publish_url=https://workbuddy.link/p/sv6yVB7aSVwXQNYcVb2iwu），备份页已刷新（沿用固定节点，未新建/换节点）。",
+  "giteeNote": "Gitee 离线下载中转：git push origin master 成功（0645f0e..fea6ed6，EXIT=0），仓库 https://gitee.com/garden-of-flowers/daily-news 已更新离线文件下载中转；未开启 Gitee Pages。"
 }
