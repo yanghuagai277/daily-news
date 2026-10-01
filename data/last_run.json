@@ -1,9 +1,9 @@
 {
-  "lastRun": "2026-10-01T15:40:04.529812+08:00",
-  "date": "2026-10-01",
-  "status": "partial",
+  "lastRun": "2026-10-02T07:50:00+08:00",
+  "date": "2026-10-02",
+  "status": "success",
   "itemCount": 17,
-  "githubNote": "GitHub Pages 主入口：本沙箱当前无法连接 GitHub（api.github.com 返回 WinError 10061 积极拒绝；github.com:443 超时 'Could not connect to server'），push_via_api.py 与 git push 均失败。本地提交 fea6ed6（5 files: data/news.json, data/yesterday.json, index.html, news-offline.html, data/last_run.json）已完成、内容正确。待沙箱网络恢复后重跑 `python tools/push_via_api.py` 即可推送并触发 Pages 重建（约30-60秒）。当前线上 Pages 仍为 2026-09-30 旧数据，需补齐推送后才会刷新。",
-  "pageNote": "资料库备用入口：runtime_context 判 client 模式，connect_open_platform(skill_id=library) 取 token 经 --token-stdin 传入；import_html.py 输出 KS_IMPORT_OK（file_name=news-offline.html），publish_page.py 输出 KS_PAGE_PUBLISH（publish_url=https://workbuddy.link/p/sv6yVB7aSVwXQNYcVb2iwu），备份页已刷新（沿用固定节点，未新建/换节点）。",
-  "giteeNote": "Gitee 离线下载中转：git push origin master 成功（0645f0e..fea6ed6，EXIT=0），仓库 https://gitee.com/garden-of-flowers/daily-news 已更新离线文件下载中转；未开启 Gitee Pages。"
+  "githubNote": "push_via_api 成功（NEW_COMMIT 8ebab5395，API_PUSH_OK），GitHub Pages 已在线重建；本地与远端 main 因 API 造提交而分叉（ALIGN_SKIPPED），不影响线上内容。",
+  "pageNote": "资料库备用页已刷新（KS_IMPORT_OK + KS_PAGE_PUBLISH）：https://workbuddy.link/p/sv6yVB7aSVwXQNYcVb2iwu",
+  "giteeNote": "git push origin master 成功（1e66602..1de0979），作离线文件下载中转。"
 }
