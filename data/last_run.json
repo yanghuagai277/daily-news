@@ -1,9 +1,9 @@
 {
-  "lastRun": "2026-10-03T08:46:00+08:00",
-  "date": "2026-10-03",
+  "lastRun": "2026-10-04T11:59:00+08:00",
+  "date": "2026-10-04",
   "status": "success",
-  "itemCount": 18,
-  "githubNote": "push_via_api 成功（NEW_COMMIT 7bcb79dd5e，API_PUSH_OK），GitHub Pages 已在线重建并经公网轮询校验：date=2026-10-03、items=18、index 含 renderList（非空白页）。本地与远端 main 因 API 造提交分叉（ALIGN_SKIPPED），不影响线上内容。",
+  "itemCount": 17,
+  "githubNote": "push_via_api 成功（NEW_COMMIT b11a99e6ce，API_PUSH_OK），4 文件（news.json/yesterday.json/index.html/news-offline.html）更新；公网轮询校验 data/news.json date=2026-10-04、items=17、首页 index 含 renderList（非空白页）。本地与远端 main 因 API 造提交分叉（ALIGN_SKIPPED），不影响线上内容。",
   "pageNote": "资料库备用页已刷新（KS_IMPORT_OK + KS_PAGE_PUBLISH）：https://workbuddy.link/p/sv6yVB7aSVwXQNYcVb2iwu",
-  "giteeNote": "git push origin master 成功（1de0979..b0ad3e5），作离线文件下载中转，未开 Pages。"
+  "giteeNote": "git push origin master 成功（0f76994..3198105，EXIT=0），作离线文件下载中转，未开 Pages。"
 }
