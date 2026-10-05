@@ -5,5 +5,5 @@
   "itemCount": 18,
   "githubNote": "push_via_api 成功（NEW_COMMIT 31258e506cc63668ab3eb0253653c5faac310d9f，API_PUSH_OK），5 文件（news.json/yesterday.json/index.html/news-offline.html/last_run.json）更新；公网轮询校验 data/news.json date=2026-10-05、items=18、首页 index 含 renderList（非空白页）。本地与远端 main 因 API 造提交分叉（ALIGN_SKIPPED），不影响线上内容。",
   "pageNote": "资料库备用页已刷新（KS_IMPORT_OK + KS_PAGE_PUBLISH）：https://workbuddy.link/p/sv6yVB7aSVwXQNYcVb2iwu",
-  "giteeNote": "git push origin master 后台执行中（task kHltuf），作离线文件下载中转，未开 Pages。"
+  "giteeNote": "Gitee 推送重试已派发（后台任务 EIWPcA；前次 kHltuf 已被回收，运行 9+ 分钟无输出，gitee.com 出站网络受限，与 09-11/09-13/09-17/09-23 超时一致）；作离线文件下载中转、非主交付，不影响 GitHub Pages 与资料库在线页。若后台任务最终超时，下次自动化或网络恢复后 `git push origin master` 可补齐镜像。"
 }
