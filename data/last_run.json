@@ -1,9 +1,9 @@
 {
-  "lastRun": "2026-10-05T09:48:26.237843+08:00",
-  "date": "2026-10-05",
+  "lastRun": "2026-10-06T07:12:00+08:00",
+  "date": "2026-10-06",
   "status": "success",
-  "itemCount": 18,
-  "githubNote": "push_via_api 成功（NEW_COMMIT 31258e506cc63668ab3eb0253653c5faac310d9f，API_PUSH_OK），5 文件（news.json/yesterday.json/index.html/news-offline.html/last_run.json）更新；公网轮询校验 data/news.json date=2026-10-05、items=18、首页 index 含 renderList（非空白页）。本地与远端 main 因 API 造提交分叉（ALIGN_SKIPPED），不影响线上内容。",
-  "pageNote": "资料库备用页已刷新（KS_IMPORT_OK + KS_PAGE_PUBLISH）：https://workbuddy.link/p/sv6yVB7aSVwXQNYcVb2iwu",
-  "giteeNote": "Gitee 推送重试已派发（后台任务 EIWPcA；前次 kHltuf 已被回收，运行 9+ 分钟无输出，gitee.com 出站网络受限，与 09-11/09-13/09-17/09-23 超时一致）；作离线文件下载中转、非主交付，不影响 GitHub Pages 与资料库在线页。若后台任务最终超时，下次自动化或网络恢复后 `git push origin master` 可补齐镜像。"
+  "itemCount": 17,
+  "githubNote": "push_via_api 成功（NEW_COMMIT 29b6e5d9d3e029a868f49fe01ba5532236549ce4，API_PUSH_OK），news.json/yesterday.json/index.html/news-offline.html 更新；公网轮询第 3 次命中，data/news.json date=2026-10-06、items=17、首页 index 含 renderList（非空白页）。本地与远端 main 因 API 造提交分叉（ALIGN_SKIPPED），不影响线上内容。",
+  "pageNote": "资料库备用页已刷新（KS_IMPORT_OK + KS_PAGE_PUBLISH）：https://workbuddy.link/p/sv6yVB7aSVwXQNYcVb2iwu ，发布返回 publishUrl 一致。",
+  "giteeNote": "Gitee 推送已派发（git push origin master）；gitee.com 出站常超时、作离线文件下载中转、非主交付，失败不影响 GitHub Pages 与资料库在线页。"
 }
