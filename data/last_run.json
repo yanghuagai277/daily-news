@@ -5,5 +5,5 @@
   "itemCount": 16,
   "githubNote": "push_via_api 成功（NEW_COMMIT acf60394750c6285e5daabcd6bea3e6bcccbd952，API_PUSH_OK），data/news.json/yesterday.json/index.html/news-offline.html 更新；公网校验 data/news.json date=2026-10-10、items=16、首页含 renderList(3)/window.__DATA__(2)（第3次轮询命中，Pages 重建约40秒）。本地与远端 main 因 API 造提交分叉（ALIGN_SKIPPED），不影响线上内容。",
   "pageNote": "资料库备用页已刷新（KS_IMPORT_OK + KS_PAGE_PUBLISH）：https://workbuddy.link/p/sv6yVB7aSVwXQNYcVb2iwu ，发布返回 publishUrl 一致。",
-  "giteeNote": "git push origin master 已派发后台执行（task gSd6h3）；gitee.com 出站常超时、作离线文件下载中转、非主交付，待结果补记。"
+  "giteeNote": "git push origin master 成功（40227e1..73e5b9a，离线文件 news-offline.html 已镜像至 https://gitee.com/garden-of-flowers/daily-news 作下载中转，未开 Pages）。"
 }
