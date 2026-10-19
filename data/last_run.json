@@ -5,5 +5,5 @@
   "itemCount": 17,
   "githubNote": "push_via_api 成功（NEW_COMMIT 6e1241066fb…，API_PUSH_OK），data/news.json/index.html/news-offline.html/yesterday.json 更新；经 raw.githubusercontent.com 按提交 SHA 核验 data/news.json date=2026-10-19、items=17 内容正确（非空白页）。GitHub Pages CDN 在推送后约数分钟仍在回源旧版，属正常传播延迟，远端提交内容已确认正确。本地与远端 main 因 API 造提交分叉（ALIGN_SKIPPED），不影响线上内容。",
   "pageNote": "资料库备用页已刷新（KS_IMPORT_OK + KS_PAGE_PUBLISH）：https://workbuddy.link/p/sv6yVB7aSVwXQNYcVb2iwu 。",
-  "giteeNote": "git push origin master 已派发（后台任务 GvJoaP），gitee.com 出站网络在本沙箱间歇性受限，作离线文件下载中转、非主交付；若最终超时不影响主在线入口（GitHub Pages 主 + 资料库页均已完成）。未开启 Pages。"
+  "giteeNote": "git push origin master 重试失败：gitee.com 出站网络在本沙箱被阻断（后台推送任务挂起约5分钟后终止），非主交付、不影响主在线入口（GitHub Pages 主 + 资料库页均已确认上线）。仓库 https://gitee.com/garden-of-flowers/daily-news 仅作离线文件下载中转，未开启 Pages；待沙箱网络恢复后手动重推即可补齐镜像。"
 }
