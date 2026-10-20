@@ -1,9 +1,9 @@
 {
-  "lastRun": "2026-10-19T09:58:00+08:00",
-  "date": "2026-10-19",
+  "lastRun": "2026-10-20T10:12:15+08:00",
+  "date": "2026-10-20",
   "status": "success",
-  "itemCount": 17,
-  "githubNote": "push_via_api 成功（NEW_COMMIT 6e1241066fb…，API_PUSH_OK），data/news.json/index.html/news-offline.html/yesterday.json 更新；经 raw.githubusercontent.com 按提交 SHA 核验 data/news.json date=2026-10-19、items=17 内容正确（非空白页）。GitHub Pages CDN 在推送后约数分钟仍在回源旧版，属正常传播延迟，远端提交内容已确认正确。本地与远端 main 因 API 造提交分叉（ALIGN_SKIPPED），不影响线上内容。",
-  "pageNote": "资料库备用页已刷新（KS_IMPORT_OK + KS_PAGE_PUBLISH）：https://workbuddy.link/p/sv6yVB7aSVwXQNYcVb2iwu 。",
-  "giteeNote": "git push origin master 重试失败：gitee.com 出站网络在本沙箱被阻断（后台推送任务挂起约5分钟后终止），非主交付、不影响主在线入口（GitHub Pages 主 + 资料库页均已确认上线）。仓库 https://gitee.com/garden-of-flowers/daily-news 仅作离线文件下载中转，未开启 Pages；待沙箱网络恢复后手动重推即可补齐镜像。"
+  "itemCount": 18,
+  "githubNote": "GitHub Pages 主入口经 push_via_api.py 推送成功（NEW_COMMIT 94b087dc1b0aaf91ea1663144569638b83fe01ac，API_PUSH_OK），data/news.json / index.html / news-offline.html / yesterday.json 均已更新；本地与远端 main 因 API 造提交分叉（ALIGN_SKIPPED），不影响线上内容。github.com:443 git 传输在本沙箱被阻断，但 api.github.com REST 端点可达，故主入口走 API 推送为可靠路径。",
+  "pageNote": "资料库备用页已刷新（KS_IMPORT_OK + KS_PAGE_PUBLISH）：https://workbuddy.link/p/sv6yVB7aSVwXQNYcVb2iwu 。重要纠正：本次任务文本给出的节点 id sv6yVB7aSVwXNYcVb2iwu 实为笔误，正确且已被连续 40+ 天使用的节点为 sv6yVB7aSVwXQNYcVb2iwu（多 1 个字母 Q）；误用 XN 作为导入节点会生成孤立节点（RtGPwaq7gNsnLvIzrO2CNg），已改回 XQ 正确节点更新并发布，备份页内容已是最新 2026-10-20 版。",
+  "giteeNote": "git push origin master 成功（6e6c111..20e57e7，EXIT=0，耗时约数秒），仓库 https://gitee.com/garden-of-flowers/daily-news 作离线文件下载中转；未开启 Pages。本次 gitee.com 出站网络通畅，镜像已补齐。"
 }
