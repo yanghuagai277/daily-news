@@ -1,9 +1,9 @@
 {
-  "lastRun": "2026-10-22T12:05:00+08:00",
-  "date": "2026-10-22",
+  "lastRun": "2026-10-23T07:41:00+08:00",
+  "date": "2026-10-23",
   "status": "success",
   "itemCount": 18,
-  "githubNote": "GitHub Pages 主入口经 push_via_api.py 推送成功（NEW_COMMIT 168b2b9c6ec83fac33dbdcfdf6d76f45baefad28，API_PUSH_OK），data/news.json / index.html / news-offline.html / yesterday.json 均已更新；公网校验 data/news.json date=2026-10-22、18 条、首末条标题正确（WebFetch 带缓存破坏参数命中，index 因 WebFetch 剥离 <script> 仅显示“加载中”属正常，渲染完整性以 news-offline.html 及 data/news.json 为准）。本地与远端 main 因 API 造提交分叉（ALIGN_SKIPPED），不影响线上内容。",
-  "pageNote": "资料库备用页已刷新（KS_IMPORT_OK + KS_PAGE_PUBLISH）：https://workbuddy.link/p/sv6yVB7aSVwXQNYcVb2iwu 。节点 sv6yVB7aSVwXQNYcVb2iwu（XQ）为正确固定节点，已更新既有节点并发布，备份页内容已是最新 2026-10-22 版（18 条 / 13 专题）。",
-  "giteeNote": "Gitee 离线文件下载中转推送已派发（git push origin master，后台任务 ZakBoS）；gitee.com 出站网络历史常受限，作离线中转、非主交付，失败不影响主在线入口。"
+  "githubNote": "GitHub Pages 主入口经 push_via_api.py 推送成功（NEW_COMMIT 9c26b2ee14518c7dfb0b3e2350796deec7f89f71，API_PUSH_OK），data/news.json / index.html / news-offline.html / yesterday.json 均已更新；公网轮询第4次命中 data/news.json date=2026-10-23、18条，首页 index.html 含 getElementById/renderList/innerHTML/addEventListener/window.__DATA__ 且 2026-10-23 在、非空白页（Python 直连核验）。本地与远端 main 因 API 造提交分叉（ALIGN_SKIPPED），不影响线上内容。",
+  "pageNote": "资料库备用页已刷新（KS_IMPORT_OK + KS_PAGE_PUBLISH）：https://workbuddy.link/p/sv6yVB7aSVwXQNYcVb2iwu 。节点 sv6yVB7aSVwXQNYcVb2iwu（XQ）为正确固定节点，已更新既有节点并发布，备份页内容已是最新 2026-10-23 版（18 条 / 11 专题）。",
+  "giteeNote": "Gitee 离线文件下载中转推送已派发（git push origin master）；gitee.com 出站网络历史常受限，作离线中转、非主交付，失败不影响主在线入口。"
 }
