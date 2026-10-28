@@ -1,9 +1,9 @@
 {
-  "lastRun": "2026-10-26T11:55:00+08:00",
-  "date": "2026-10-26",
+  "lastRun": "2026-10-27T07:25:00+08:00",
+  "date": "2026-10-27",
   "status": "success",
   "itemCount": 18,
-  "githubNote": "GitHub Pages 主入口经 push_via_api.py 推送成功（NEW_COMMIT e68600bea0cdfa7daaa4a56cbd2cd2486980aa38，API_PUSH_OK），data/news.json / index.html / news-offline.html / yesterday.json 均已更新；公网轮询命中 data/news.json date=2026-10-26、18条，首页含 getElementById/renderList/innerHTML/addEventListener/window.__DATA__ 且非空白页（Python 直连核验一致）。本地与远端 main 因 API 造提交分叉（ALIGN_SKIPPED），不影响线上内容。",
-  "pageNote": "资料库备用页已刷新（KS_IMPORT_OK + KS_PAGE_PUBLISH）：https://workbuddy.link/p/sv6yVB7aSVwXQNYcVb2iwu 。节点 sv6yVB7aSVwXQNYcVb2iwu 为正确固定节点，已更新既有节点并发布，备份页内容已是最新 2026-10-26 版（18 条 / 13 专题）。",
-  "giteeNote": "Gitee 离线文件下载中转推送成功（4a2c67a..2eac982，EXIT=0，耗时约2m34s），仓库 https://gitee.com/garden-of-flowers/daily-news 作离线文件下载中转；未开 Pages。"
+  "githubNote": "GitHub Pages 主入口经 push_via_api.py 推送成功（NEW_COMMIT 77905a6e66e0dac4ef9c51d39aec13a9e6fc26eb，API_PUSH_OK），data/news.json / index.html / news-offline.html / yesterday.json 均已更新；公网轮询命中 data/news.json date=2026-10-27、18条，首页含 renderList（非空白页）。本地与远端 main 因 API 造提交分叉（ALIGN_SKIPPED），不影响线上内容。",
+  "pageNote": "资料库备用页已刷新（KS_IMPORT_OK + KS_PAGE_PUBLISH）：https://workbuddy.link/p/sv6yVB7aSVwXQNYcVb2iwu 。节点 sv6yVB7aSVwXQNYcVb2iwu 为正确固定节点，已更新既有节点并发布，内容已是最新 2026-10-27 版（18 条 / 12 专题）。",
+  "giteeNote": "Gitee 离线文件下载中转推送成功（2eac982..f79865b，EXIT=0，耗时约数秒），仓库 https://gitee.com/garden-of-flowers/daily-news 已更新离线文件下载中转；未开 Pages。"
 }
