@@ -1,9 +1,9 @@
 {
-  "lastRun": "2026-11-05T07:50:00.000000+08:00",
-  "date": "2026-11-05",
+  "lastRun": "2026-11-06T08:08:09.458674+08:00",
+  "date": "2026-11-06",
   "status": "success",
   "itemCount": 18,
-  "githubNote": "GitHub Pages 主入口经 push_via_api.py 推送成功（首推 NEW_COMMIT 17f2a17569cb66bb9ad37a0ef65cb3f2391edaf9，随后同步 last_run.json 再推 NEW_COMMIT 61f06d042cf44e244300a807a0f36bb204a3e0dc，均 API_PUSH_OK）；data/news.json、yesterday.json、index.html、news-offline.html、last_run.json 均已更新。公网轮询在 attempt 2 命中 data/news.json date=2026-11-05、18 条，首页含 renderList（非空白页）。本地与远端 main 因 API 造提交分叉（ALIGN_SKIPPED），不影响线上内容。",
-  "pageNote": "资料库备用页已刷新（KS_IMPORT_OK + KS_PAGE_PUBLISH）：https://workbuddy.link/p/sv6yVB7aSVwXQNYcVb2iwu 。固定节点 sv6yVB7aSVwXQNYcVb2iwu（未新建/不更换）已导入最新 news-offline.html 并发布，含当天 18 条 / 11 专题；client 模式 token 经 --token-stdin 传入。",
-  "giteeNote": "Gitee 离线文件下载中转推送（git push origin master）失败：后台首次推送卡住逾 8 分钟被终止，重试一次仍超时（EXIT=124，沙箱连 gitee.com 被限、非致命），未影响主交付。Gitee 仅作离线文件下载中转、未开启 Pages；待网络可用时可手动补推。"
+  "githubNote": "GitHub Pages 主入口经 push_via_api.py 推送成功（NEW_COMMIT 0dbbf6ff494dafec1dec6bfd005cc3b4915a6178，API_PUSH_OK）；data/news.json、yesterday.json、index.html、news-offline.html、_gen_1106.py 均已更新。公网轮询在 attempt 4 命中 data/news.json date=2026-11-06、18 条，首页含 renderList 与 window.__DATA__（非空白页）。本地与远端 main 因 API 造提交分叉（ALIGN_SKIPPED），不影响线上内容。",
+  "pageNote": "资料库备用页已刷新（KS_IMPORT_OK + KS_PAGE_PUBLISH）：https://workbuddy.link/p/sv6yVB7aSVwXQNYcVb2iwu 。固定节点 sv6yVB7aSVwXQNYcVb2iwu（未新建/不更换）已导入最新 news-offline.html 并发布，含当天 18 条 / 12 专题；client 模式 token 经 --token-stdin 传入。",
+  "giteeNote": "Gitee 离线文件下载中转推送（git push origin master）成功：699a819..1927ae6 master -> master（EXIT=0），无需重试；离线文件镜像已更新。"
 }
