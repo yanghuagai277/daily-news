@@ -1,9 +1,9 @@
 {
-  "lastRun": "2026-11-06T08:08:09.458674+08:00",
-  "date": "2026-11-06",
+  "lastRun": "2026-11-07T08:00:22.000000+08:00",
+  "date": "2026-11-07",
   "status": "success",
-  "itemCount": 18,
-  "githubNote": "GitHub Pages 主入口经 push_via_api.py 推送成功（NEW_COMMIT 0dbbf6ff494dafec1dec6bfd005cc3b4915a6178，API_PUSH_OK）；data/news.json、yesterday.json、index.html、news-offline.html、_gen_1106.py 均已更新。公网轮询在 attempt 4 命中 data/news.json date=2026-11-06、18 条，首页含 renderList 与 window.__DATA__（非空白页）。本地与远端 main 因 API 造提交分叉（ALIGN_SKIPPED），不影响线上内容。",
-  "pageNote": "资料库备用页已刷新（KS_IMPORT_OK + KS_PAGE_PUBLISH）：https://workbuddy.link/p/sv6yVB7aSVwXQNYcVb2iwu 。固定节点 sv6yVB7aSVwXQNYcVb2iwu（未新建/不更换）已导入最新 news-offline.html 并发布，含当天 18 条 / 12 专题；client 模式 token 经 --token-stdin 传入。",
-  "giteeNote": "Gitee 离线文件下载中转推送（git push origin master）成功：699a819..1927ae6 master -> master（EXIT=0），无需重试；离线文件镜像已更新。"
+  "itemCount": 17,
+  "githubNote": "GitHub Pages 主入口经 push_via_api.py 推送成功（NEW_COMMIT 0bf1013b24cfe7c0b720d7dafbb673715381e4c7，API_PUSH_OK）；data/news.json、yesterday.json、index.html、news-offline.html 均已更新（sw.js 远端缺失、跳过）。公网轮询 attempt 1 即命中 data/news.json date=2026-11-07、17 条，首页含 renderList 与 window.__DATA__（非空白页）。本地与远端 main 因 API 造提交分叉（ALIGN_SKIPPED），内容已上 main，不影响线上访问。",
+  "pageNote": "资料库备用页已刷新（KS_IMPORT_OK + KS_PAGE_PUBLISH）：https://workbuddy.link/p/sv6yVB7aSVwXQNYcVb2iwu 。固定节点 sv6yVB7aSVwXQNYcVb2iwu（未新建/不更换）已导入最新 news-offline.html 并发布，含当天 17 条 / 13 专题；client 模式 token 经 --token-stdin 传入。",
+  "giteeNote": "Gitee 离线文件下载中转推送（git push origin master）成功：1927ae6..1fb9971 master -> master（EXIT=0），无需重试；离线文件镜像已更新。"
 }
