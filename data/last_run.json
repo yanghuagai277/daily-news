@@ -1,9 +1,9 @@
 {
-  "lastRun": "2026-11-08T08:48:09.000000+08:00",
-  "date": "2026-11-08",
+  "lastRun": "2026-11-09T12:11:26.482656+08:00",
+  "date": "2026-11-09",
   "status": "success",
-  "itemCount": 18,
-  "githubNote": "GitHub Pages 主入口经 push_via_api.py 推送成功（NEW_COMMIT 7dcda74974d1e84a1d702d794c8eeb4eaed7e48c，API_PUSH_OK）；data/news.json、yesterday.json、index.html、news-offline.html 均已更新（sw.js 远端缺失、跳过）。公网轮询 attempt 3 命中 data/news.json date=2026-11-08、18 条，首页含 renderList（非空白页）。本地与远端 main 因 API 造提交分叉（ALIGN_SKIPPED），内容已上 main，不影响线上访问。",
-  "pageNote": "资料库备用页已刷新（KS_IMPORT_OK + KS_PAGE_PUBLISH）：https://workbuddy.link/p/sv6yVB7aSVwXQNYcVb2iwu 。固定节点 sv6yVB7aSVwXQNYcVb2iwu（未新建/不更换）已导入最新 news-offline.html 并发布，含当天 18 条 / 13 专题；client 模式 token 经 --token-stdin 传入。",
-  "giteeNote": "Gitee 离线文件下载中转推送（git push origin master）成功：ada5010..b995808 master -> master（EXIT=0），无需重试；离线文件镜像已更新。"
+  "itemCount": 17,
+  "githubNote": "GitHub Pages 推送成功：push_via_api.py 输出 NEW_COMMIT 2bf1d37451 + API_PUSH_OK（main 分支）；公网轮询 attempt 2 命中 date=2026-11-09、17条、首页含 renderList（非空白页）。ALIGN_SKIPPED（本地与远端历史分叉，内容已上 main，非致命）。",
+  "pageNote": "资料库备用页更新成功：import_html.py 输出 KS_IMPORT_OK（节点 sv6yVB7aSVwXQNYcVb2iwu，client 模式 token 经 --token-stdin 传入）；publish_page.py 输出 KS_PAGE_PUBLISH，公网链接 https://workbuddy.link/p/sv6yVB7aSVwXQNYcVb2iwu。",
+  "giteeNote": "Gitee 离线文件推送成功：b995808..ea1197e master->master（EXIT=0，沙箱本次连通 gitee.com）。"
 }
