@@ -1,9 +1,9 @@
 {
-  "lastRun": "2026-11-16T07:23:31.743797+08:00",
+  "lastRun": "2026-11-16T07:24:39.142564+08:00",
   "date": "2026-11-16",
   "status": "success",
   "itemCount": 18,
-  "githubNote": "待推送",
+  "githubNote": "push_via_api.py 首推 NEW_COMMIT b6e532423d83cc75410ad620c9eb1a31aaaff206 (API_PUSH_OK)；公网轮询 attempt 3 命中 date=2026-11-16、18条、首页含 renderList（非空白页）；站点 https://yanghuagai277.github.io/daily-news/",
   "pageNote": "待更新",
   "giteeNote": "待推送"
 }
