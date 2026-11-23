@@ -3,7 +3,7 @@
   "date": "2026-11-23",
   "status": "success",
   "itemCount": 18,
-  "githubNote": "待推送",
-  "pageNote": "待更新",
-  "giteeNote": "待推送"
+  "githubNote": "API推送 NEW_COMMIT ec0a9b0c7c611c536487a98002b1312d669704f3（API_PUSH_OK）；公网轮询attempt3命中 date=2026-11-23/18条/renderList在（非空白页）",
+  "pageNote": "资料库固定节点 sv6yVB7aSVwXQNYcVb2iwu：KS_IMPORT_OK + KS_PAGE_PUBLISH，https://workbuddy.link/p/sv6yVB7aSVwXQNYcVb2iwu",
+  "giteeNote": "git push origin master 首次挂起(约5分钟)后停止、重试超时(EXIT=124，沙箱阻断 gitee.com)，离线文件中转未完成；不影响 GitHub Pages 主交付"
 }
